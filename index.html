@@ -1,213 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Demo of Startup Framework - Free Bootstrap Themes & Templates Included</title>
-        <meta name="description" content="Demo version of Startup Design Framework. Here are two free Bootstrap themes and templates with beautiful design in HTML and PSD formats."/>
-		<style>
-            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
-            article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
-            body{line-height:1}
-            ol,ul{list-style:none}
-            blockquote,q{quotes:none}
-            blockquote:before,blockquote:after,q:before,q:after{content:none}
-            table{border-collapse:collapse;border-spacing:0}
-            html {position:static!important;top:0!important;}
-            body {font-family: 'Helvetica Neue', Helvetica, Arial, serif;cursor:default;-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-            
-            *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-            a {-webkit-transition: 0.5s ease;-moz-transition: 0.5s;-ms-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;}
-            
-            h1 {font-size: 35px; font-weight: bold; margin-bottom: 70px; letter-spacing: -1px; color: #1b1f23;line-height: 45px;}
-            h2 {font-size: 28px; font-weight: bold; margin-bottom: 70px; letter-spacing: -1px; color: #303336; line-height:40px;}
-            h4 {font-size: 20px; font-weight: bold; margin-bottom: 27px; letter-spacing: -1px; color: #1b1f23}
-            
-            .menu {padding:88px 20px 0; width: 100%; max-width: 940px; margin: 0 auto;}
-            .back {display: inline-block; float: right; font-size: 18px; border: 2px solid #f3f4f5; border-radius: 6px; text-decoration: none; color: black; padding:15px 22px; letter-spacing:0px}
-            .back:hover {background-color: #1b1f23; border: 2px solid #1b1f23; color: white; cursor:pointer} 
-            .back img{padding-right: 22px}
-            .back b {font-weight:bold;-webkit-transition: none;-moz-transition: none;-ms-transition: none;-o-transition: none;transition: none;}
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-            .overview {max-width: 800px; margin: 0 auto;padding: 130px 20px;}
-            .samples {max-width: 800px; margin: 0 auto; padding: 130px 20px}
-            .gray-wrapper {background-color: #f2f2f1;}
-            .components {max-width: 800px; margin: 0 auto; padding: 130px 20px;}
-            .cc {max-width: 800px; margin: 0 auto; padding: 130px 0;text-align:center;}
-            .cc img {margin-bottom:45px; }
-            .cc h2 a {color:#303336; border-bottom:1px solid #cbcbcb;text-decoration: none;}
-            .cc h2 a:hover { opacity:0.8; }
-            
-            .logo {display: inline-block; margin-top:16px;}
-            .article-content {line-height: 36px; font-size: 20px; color: #636F70}
-            .features {padding-top: 45px;}
-            .features img {padding-bottom: 44px;max-width:100%;}
-            .features li {width: 230px;display: inline-block;margin-right: 18px;padding:19px 19px;position: relative;left: -23px;border:4px solid rgba(191,191,186,0);vertical-align: top;}
-            .features li:last-child {margin-right:0;}
-            .features p {font-size: 16px; line-height: 26px; color:#696f6f;margin-bottom: 7px;}
-            .features a {line-height: 32px; color:#1b1f23; text-decoration:none;border-bottom:1px solid #cbcbcb;}
-            .features a:hover { color:#35d0b5 }
-			
-            .grab a {display:block;background-color:#35d0b5; padding: 46px;font-weight:200;font-size: 40px; color: white; text-decoration:none; letter-spacing:-1px;text-align:center;}
-            .grab strong { font-weight:700;}
-            .grab a:hover {background-color: #e74c3c;}
-            
-            .footer { font-size:14px;color:#696f6f;padding:75px 0; text-align:center; max-width:940px; margin: 0 auto;line-height:26px;}
-            .footer a { color:#1b1f23; text-decoration:none;border-bottom: 1px solid #cbcbcb;}
-			 .footer a:hover { color:#35d0b5;}
-			
-			 @media screen and (max-width: 840px) {
-			 	.features li { left:0; padding:23px 0; border-width:0px; width: 32%; margin:0 0 1%; }
-				.samples li:last-child {height:auto;margin:0;}
-				.samples, .components, .images, .cc { padding: 85px 20px;}
-				h1 {margin-bottom: 50px;}
-			 }
-			 
-			 @media screen and (max-width: 768px) {
-				.features li { padding:23px 10px 0 0; }
-			 }
-			 
-			 @media screen and (max-width: 568px) {
-				.samples, .overview, .components, .images, .cc { padding: 50px 20px;}
-				h1 { margin-bottom: 30px;}
-				h2 {font-size: 24px;margin-bottom: 47px;line-height: 35px;}
-			 }
-			 
-			 @media screen and (max-width: 480px) {
-				 .features li { display:block;width:100%;}
-				 .features img { width:auto;}	 
-				 .menu { padding: 0;text-align: center;}
-				 .logo { padding: 40px 20px; }
-				 .back { display: block; float: none; border-radius:0; border-right-width:0; border-left-width:0px;border-top-width:0px; }
-				 .grab a { font-size: 30px } 
-			 	.shares iframe { display:block;margin: 15px auto;}
-			 }
-        </style>
-    </head>
-    <body>
-        <div class="wrap">
-            <div class="menu">
-            
-                <a href="http://designmodo.com/startup" class="back"><img src="img/arrow-left.png">Back to the <b>Presentation</b></a>
-                <div class="logo">
-                    <a href="http://designmodo.com"><img src="img/logo.png"></a>
-                </div>
-           </div>
-           
-           <div class="content">
-                <div class="overview">
-                  <h1>Demo Version of Startup Framework</h1>
-                  <p class="article-content">We have created this demo version in order to show you the structure of Startup Framework. It has some of the components from the full version, 2 great samples (Bootstrap themes) and documentation. You can also find 2 images of a Macbook and an iPad, which you can use in your project. We hope you will like your first introduction to Startup Framework.
-</p>
-                  <ul class="features">
-                       <li>
-                            <img src="img/overview-2.png">
-                          <h4>Eleven Components</h4>
-                          <p>Each component is coded for web which will sufficiently hasten the process of creating a website.</p>
-                       </li>
-                        <li>
-                            <img src="img/overview-1.png">
-                          <h4>Two Samples</h4>
-                          <p>Samples will guide you how to play around using the UI Kit components in the website building process. </p>
-                      </li>
-                      <li>
-                            <img src="img/overview-3.png">
-                          <h4>Two Images</h4>
-                          <p>When you have to show your application or website on iPhone, iPad or Macbook you can use these images.
-</p>
-                      </li>
-                  </ul>
-               </div>
-               
-               <div class="gray-wrapper">
-                   <div class="samples">
-                        <h1>Samples</h1>
-                     <p class="article-content">The most important part of the Startup Framework are the samples or Bootstrap themes and templates. The samples consist of a set of few pages you can use "as is" or add new blocks from UI Kit. By choosing one of the 2 configurations of the future startup, the process of creation is simple and easy. You can decide whether to create your site using UI Kit components or samples.</p>
-                      <ul class="features">
-                            <li>
-                              <img src="img/samples-1.png">
-                              <h4>Sample #3</h4>
-                              <p>Clean sample with a video block, a sign-up form and price table.</p>
-                              <a href="framework/samples/sample-03/index.html" target="_blank">Live Version</a>
-                          </li>
-                          <li>
-                              <img src="img/samples-2.png">
-                              <h4>Sample #4</h4>
-                              <p>A universal sample, which meets the needs of many startups.</p>
-                              <a href="framework/samples/sample-04/index.html" target="_blank">Live Version</a>
-                          </li>
-                          <li>
-                              <img src="img/samples-3.png">
-                              <h4>Showcase</h4>
-                              <p>We like how these guys used Sample #4 for their website.</p>
-                              <a href="http://hipstafood.com" target="_blank">HipstaFood.com</a>
-                          </li>
-                      </ul>
-                   </div>
-               </div>
-               
-    
-                   <div class="components">
-                        <h1>Components</h1>
-                      <p class="article-content">Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                      <ul class="features">
-                            <li>
-                              <img src="img/components-1.png">
-                              <h4>Eleven Components</h4>
-                              <p>Eleven components like headers, footers, content blocks and a price table.</p>
-                          </li>
-                          <li>
-                              <img src="img/components-2.png">
-                              <h4>User Guide</h4>
-                              <p>You’ll get a description of each component and learn how to use them.</p>
-                          </li>
-                      </ul>
-                   </div>
-                   
-                 <div class="gray-wrapper">
-                   <div class="samples">
-                        <h1>Images</h1>
-                     <p class="article-content">We prepared some high-quality photos that you can use in your projects. When you have to show your application or website on iPhone, iPad or Macbook you can use these images.
- +Just put the image of your app inside Smart Layer.</p>
-                      <ul class="features">
-                            <li>
-                              <img src="img/overview-3.png">
-                              <h4>Macbook</h4>
-                              <p>You can place your image in a laptop window or on a moleskine page.</p>
-                              <a href="img/macbook.jpg" target="_blank">Look at the photo</a>
-                          </li>
-                          <li>
-                              <img src="img/images-2.png">
-                              <h4>iPad in the Hands</h4>
-                              <p>You most probably will need a photo with an iPad ;)</p>
-                              <a href="img/ipad.jpg" target="_blank">Look at the photo</a>
-                          </li>
-                      </ul>
-                   </div>
-               </div>
-               
-				<div class="cc">
-                	<img src="img/cc.png"/>
-					<h2><a href="http://creativecommons.org/licenses/by/4.0/deed.en_US" target="_blank">This demo is licensed under a CC 4.0. You are allowed to use these components anywhere you want, however we’ll highly appreciate if you'll show a link to our website.</a></h2>
-                    <div class="shares">
-                  	<a href="https://twitter.com/share" class="twitter-share-button" data-via="designmodo" data-size="large">Tweet</a>
-                  	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                  	<iframe src="http://ghbtns.com/github-btn.html?user=designmodo&repo=startup-demo&type=watch&count=true&size=large" frameborder="0" scrolling="0" style="width: 155px;height: 30px;" allowTransparency="true"></iframe>
-                  	<iframe src="http://ghbtns.com/github-btn.html?user=designmodo&repo=startup-demo&type=fork&count=true&size=large" frameborder="0" scrolling="0" style="width: 140px;height: 30px;" allowTransparency="true"></iframe>
-                    </div>
-				</div>
-                
-                
-               <div class="grab">
-                <a href="https://github.com/designmodo/startup-demo/archive/master.zip"><strong>Download demo</strong> for free</a>
-               </div>
-    
-    
-    			<div class="footer">
-                <p>Copyright 2014 © <a href="http://designmodo.com/">Designmodo</a>. All Rights Reserved.</p>
-                <p>Presentation of <a href="http://designmodo.com/startup/">Startup Framework</a>.</p>
-				</div>
-               
-            </div>
-        </div>
-    </body>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Startup-demo by stackfoward</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Startup-demo</h1>
+        <h2>Demo Version of Startup Framework</h2>
+        <a href="https://github.com/stackfoward/startup-demo" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/stackfoward/startup-demo/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/stackfoward/startup-demo/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/stackfoward/startup-demo"></a> is maintained by <a href="https://github.com/stackfoward">stackfoward</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
 </html>
